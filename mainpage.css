@@ -1,0 +1,12 @@
+#head{
+    height:200px;
+    width: 1520px;
+    background-color:rgb(17, 20, 52) ;
+}
+#maintitle{
+    position: relative;
+    top: 70px;
+    left: 300px;
+    color: azure;
+    font-size: 50px;
+}
