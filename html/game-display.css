@@ -12,7 +12,7 @@ h2{
 	margin-left: 20px;
 	margin-top: 25px;
 	font-family: cursive;
-	font-size: 30px;
+	font-size: 37px;
 }
 
 .title{
@@ -47,14 +47,32 @@ button{
 	font-size: 20px;
 }
 
-.back{
-	margin-left: 20px;
+.back {
+	margin-left: 30px;
+	background-color:#44c767;
+	border-radius:42px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
 }
+.back:hover {
+	background-color:#5cbf2a;
+}
+.back:active {
+	position:relative;
+	top:1px;
+}
+
 
 .infos{
 	background-color: grey;
 	position: absolute;
-	width: 42%;
+	width: 42%; 
 	height: 90%;
 	right: 0px;
 	left: 850px;
@@ -65,8 +83,28 @@ button{
 }
 
 .buy{
-	margin-left: 400px;
-	margin-top: 60px;
+	margin-left: 950px;
+	margin-top: 20px;
 	width: 160px;
 	height: 80px;
+}
+
+.downbar{
+	background-color: grey;
+	position: absolute;
+	width: 80%;
+	height: 200px;
+	right: 0px;
+	left: 200px;
+	top: 845px;
+	bottom: 0px;
+	border: solid black 2px;
+	border-radius: 1%;
+}
+
+h3{
+	margin-left: 20px;
+	margin-top: 10px;
+	font-family: cursive;
+	font-size: 17px;
 }
