@@ -1,78 +1,70 @@
 body{
-	background-color: darkgray;
+	background-color: #181818;
 }
 
 h1{
 	font-family: cursive;
 	font-size: 50px;
-	color: #59005e;
+	color: #04AA6D;
 }
 
-h2{
+h2{color: #04AA6D;
 	margin-left: 20px;
 	margin-top: 25px;
 	font-family: cursive;
-	font-size: 37px;
+	font-size: 30px;
 }
 
 .title{
+position: relative;
+bottom: 90px;
+right: 150px;
 	margin-top: 115px;
 	margin-left: 250px;
 }
 
-.topbar{
-	background-color: black;
-	position: absolute;
-	width: 100%;
-	right: 0px;
-	left: 0px;
-	top: 0px;
-	bottom: 600px;
-}
+.requirment{display: flex;}
 
 .gameimg{
+	position: relative;
+		
+		
 	margin-top: 20px;
 	width: 525px;
 	height: auto;
 }
 
-button{
-	color: black;
-	background-color: #c400cf;
-	border: solid black 2px;
-	border-radius: 10%;
-	width: 100px;
-	height: auto;
-	font-family: cursive;
-	font-size: 20px;
+
+
+button {
+	background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color: #77b55a;
+	border-radius: 26px;
+	border: 1px solid #4b8f29;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Georgia;
+	font-size: 16px;
+	padding: 15px 34px;
+	text-decoration: none;
 }
 
-.back {
-	margin-left: 30px;
-	background-color:#44c767;
-	border-radius:42px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Trebuchet MS;
-	font-size:28px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+button:hover {
+	background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color: #72b352;
 }
-.back:hover {
-	background-color:#5cbf2a;
-}
-.back:active {
-	position:relative;
-	top:1px;
+
+button:active {
+	position: relative;
+	top: 1px;
 }
 
 
 .infos{
-	background-color: grey;
+	background-color: #333;
 	position: absolute;
-	width: 42%; 
+	width: 600px; 
 	height: 90%;
 	right: 0px;
 	left: 850px;
@@ -90,18 +82,20 @@ button{
 }
 
 .downbar{
+	
 	background-color: grey;
 	position: absolute;
 	width: 80%;
-	height: 200px;
+	height: 600px;
 	right: 0px;
 	left: 200px;
 	top: 845px;
 	bottom: 0px;
 	border: solid black 2px;
-	border-radius: 1%;
+	border-radius:10px;
 }
-
+p{margin-left: 20px;
+	font-size: medium;}
 h3{
 	margin-left: 20px;
 	margin-top: 10px;
