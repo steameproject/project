@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>steame</title>
     <link rel="stylesheet" href="mainpage.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,12 +19,22 @@
         <a class="active" onclick="refreshPage()">Home</a>
     
     <a href="#contact">Contact</a>
-    <div class="searchbar">
-    <input type="text" name="" id="searchbar">
-    <button class="searchbtn">Search</button>
+    
+    <a class="active" href="profile.html">user</a>
+            <button class="button" id="logout">logout</button>
+            <div class="searchbar">
+                <input type="text" name="" id="searchbar" list="suggestions">
+                <datalist id="suggestions">
+                <option value="elden ring">
+                <option value="Return to Monkey Island">
+                <option value="god of war">
+                <option value="assassin creed valhalla">
+                <option value="cyber punk 2077">
+                </datalist>
+                <button class="searchbtn">Search</button>
+            </div>
 
-    <a class="active" onclick="">user</a>
-    </div>
+    
 </div>
 </div>
 
@@ -47,11 +58,10 @@
  
     
 </div>
-
 <script>
     function refreshPage() {
         window.location.reload();
-    } 
+    }  
     let games = [
         { name: 'elden ring', price: 59.99, story: 'teststory', category: ['pc', 'adventure','action','RPG'] ,img:'htmlcss/games/eldenring.jfif' ,page:'elden.html'},
         { name: 'Return to Monkey Island', price: 29.99, story: 'teststory', category: ['pc','adventure'] ,img:'htmlcss/games/rtmi.jfif', page:'returntomonkey.html' },
@@ -61,11 +71,13 @@
         },
         {
             name: 'cyber punk 2077', price: 59.99, story: 'teststory', category: ['PC', 'Action', 'Adventure'],img:'htmlcss/games/cyberpunk.jfif' , page:'cyberpunk.html'
-        },
-        
-       
-
+        }
         ]
+        var gamenames=[]
+        for (let i = 0; i < games.length; i++) {
+            gamenames.push(games[i].name)
+            
+        }
   $('#console').click(function () {
         $('#games').empty()
         for (let i = 0; i < games.length; i++) {
@@ -228,6 +240,32 @@ var stri=arraytostr(games[i].category)
             }
 
         })
+        $('#logout').click(function () {
+
+                for (var key in localStorage) {
+                    var test = false
+                    var kei = key
+                    var newobj = JSON.parse(localStorage.getItem(kei))
+                    if (newobj.loglog === true) {
+                        var test = true
+
+
+                        break
+                    }
+                }
+                if (test === true) {
+                    newobj.loglog = false
+
+                    localStorage.setItem(kei, JSON.stringify(newobj))
+
+
+                    $('#games').empty()
+                    $('#games').append('<a href="sign-in-up.html" ><h1> ' + kei + ' click me to log out</h1></a>')
+                }
+                else if (test === false) {
+                    alert('no account open currently')
+                }
+            })
         var users = []
 </script>
 </body>

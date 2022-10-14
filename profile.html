@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steame</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <img id="logo" src="images/logo/logowhite.png" alt="">
+        <div id="navbar">
+            <a class="active" onclick="refreshPage()">Home</a>
+
+            <a href="#contact">Contact</a>
+            
+        </div>
+    </div>
+<center>
+    <div id="mainbody">
+        <div class="changedata">
+            <div id="user name">
+<label class="userchan label"> type ur new user name </label>
+<input type="text" class="userchan input" id="newuser" placeholder="user name">
+<button class="button" id="username">change </button>
+</div>
+
+    <div id="password">
+        <label class="userchan label"> type ur new password </label>
+        <input type="text" class="userchan input" id="newpassword"   placeholder="password">
+        <button class="button" id='password'>change </button>
+    </div>
+<div id="balence">
+    <label class="userchan label"> enter ur credit </label>
+    <input type="number" class="userchan input" id="newbalance"  placeholder="0000$">
+    <button class="button" id="balance" >add</button>
+</div>
+</div>
+<div id="h2"> <h2 id="h3">crat</h2></div>
+<div id="cart">
+
+</div>
+
+ 
+    </div>
+    </center>
+    <script>
+        let games = [
+                { name: 'elden ring', price: 59.99, story: 'teststory', category: ['pc', 'adventure', 'action', 'RPG'], img: 'htmlcss/games/eldenring.jfif', page: 'elden.html' },
+                { name: 'Return to Monkey Island', price: 29.99, story: 'teststory', category: ['pc', 'adventure'], img: 'htmlcss/games/rtmi.jfif', page: 'returntomonkey.html' },
+                { name: 'god of war', price: 49.99, story: 'teststory', category: ['console', 'Role-playing', 'action', 'adventure'], img: 'images/god-of-war-2018-essential-tips-and-tricks.jpg', page: 'god.html' },
+                {
+                    name: 'assassin creed valhalla', price: 59.99, story: 'teststory', category: ['PC', 'Action', 'Adventure'], img: 'htmlcss/games/acval.jfif', page: 'assassincreed.html'
+                },
+                {
+                    name: 'cyber punk 2077', price: 59.99, story: 'teststory', category: ['PC', 'Action', 'Adventure'], img: 'htmlcss/games/cyberpunk.jfif', page: 'cyberpunk.html'
+                },
+
+
+
+            ]
+            var gamenames = []
+            for (let i = 0; i < games.length; i++) {
+                gamenames.push(games[i].name)
+
+            }
+        function loging () {
+
+                for (var key in localStorage) {
+
+                    var kei = key
+                    var newobj = JSON.parse(localStorage.getItem(kei))
+                    if (newobj.loglog=== true) {
+
+
+                        break
+                    }
+                }
+
+            return newobj
+            }
+            function arraytostr(arr) {
+                    var str = ''
+                    for (let i = 0; i < arr.length; i++) {
+                        str += arr[i] + ','
+
+                    }
+                    return str
+                }
+            var carty=loging()
+            var crat=carty.cart
+       
+                $('#cart').empty()
+                for (let i = 0; i < crat.length; i++) {
+                    if (gamenames.includes(crat[i])) {
+                        for (let j = 0; j < games.length; j++) {
+                            if(games[j].name===crat[i]){
+                                var stri = arraytostr(games[i].category)
+
+                                $('#cart').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                            }
+                        }
+                        
+                    }
+
+                }
+
+            
+    $('#username').click( function () {
+
+        for (var key in localStorage) {
+
+            var kei = key
+            var newobj = JSON.parse(localStorage.getItem(kei))
+            if (newobj.loglog === true) {
+
+
+                break
+            }
+        }
+
+        newobj.username=$('#newuser').val()
+
+        localStorage.setItem(kei, JSON.stringify(newobj))
+    })
+    $('#password').click(function () {
+
+        for (var key in localStorage) {
+
+            var kei = key
+            var newobj = JSON.parse(localStorage.getItem(kei))
+            if (newobj.loglog === true) {
+
+
+                break
+            }
+        }
+
+        newobj.password = $('#newpassword').val()
+
+        localStorage.setItem(kei, JSON.stringify(newobj))
+    })
+
+    $('#balance').click(function () {
+
+        for (var key in localStorage) {
+
+            var kei = key
+            var newobj = JSON.parse(localStorage.getItem(kei))
+            if (newobj.loglog === true) {
+
+
+                break
+            }
+        }
+
+        newobj.balence = $('#newbalance').val()
+
+        localStorage.setItem(kei, JSON.stringify(newobj))
+    })
+
+    </script>
+    </body>
+    
+    </html>
