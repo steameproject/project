@@ -5,11 +5,11 @@ body {
 h1 {
 	font-family: cursive;
 	font-size: 50px;
-	color: #04AA6D;
+	color: #e22d60;
 }
 
 h2 {
-	color: #04AA6D;
+	color: #e22d60;
 	margin-left: 20px;
 	margin-top: 25px;
 	font-family: cursive;
@@ -24,7 +24,7 @@ h2 {
 	margin-left: 250px;
 }
 video{position: relative;
-left: 100px;}
+}
 .requirment {
 	display: flex;
 }
@@ -41,10 +41,10 @@ left: 100px;}
 
 
 button {
-	background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-	background-color: #77b55a;
+	background: linear-gradient(to bottom, #e22d60 5%, #af0535 100%);
+	background-color: #e22d60;
 	border-radius: 26px;
-	border: 1px solid #4b8f29;
+	border: 1px solid #af0535;
 	display: inline-block;
 	cursor: pointer;
 	color: #ffffff;
@@ -55,8 +55,8 @@ button {
 }
 
 button:hover {
-	background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-	background-color: #72b352;
+	background: linear-gradient(to bottom, #af0535 5%, #e22d60 100%);
+	background-color: #af0535;
 }
 
 button:active {

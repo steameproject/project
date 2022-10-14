@@ -18,7 +18,7 @@ body{background-color: #181818;}
 
 #logout {
     background: rgb(51, 51, 51);
-    background: radial-gradient(circle, #77b55a 0%, #04AA6D 100%);
+    background: radial-gradient(circle, #e22d60 0%, #af0535 100%);
     background-color: #333;
     border-radius: 26px;
     border: 1px solid #181818;
@@ -30,7 +30,7 @@ body{background-color: #181818;}
     padding: 15px 34px;
     text-decoration: none;
     position: relative;
-    left:30px;
+    left:300px;
 }
 .topnav a:hover {
     background-color: #ddd;
@@ -38,10 +38,11 @@ body{background-color: #181818;}
 }
 
 .active {
+    margin: 10px;
     background: rgb(51, 51, 51);
-    background: radial-gradient(circle, #77b55a 0%, #04AA6D 100%);
+    background: radial-gradient(circle, #e22d60 0%, #af0535 100%);
     background-color: #333;
-
+border-radius: 26px;
     border: 1px solid #181818;
     display: inline-block;
     cursor: pointer;
@@ -53,7 +54,7 @@ body{background-color: #181818;}
     position: relative;
 }
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #e22d60;
     color: white;
 }
 #logo{width: 200px;
@@ -63,10 +64,10 @@ left: 500px;
 bottom:70px;
 }
 .searchbtn {
-    background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-    background-color: #77b55a;
+    background: linear-gradient(to bottom, #e22d60 5%, #af0535 100%);
+    background-color: #af0535;
     border-radius: 26px;
-    border: 1px solid #4b8f29;
+    border: 1px solid #e22d60;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -77,8 +78,8 @@ bottom:70px;
 }
 a:hover{cursor: pointer;}
 .searchbtn:hover {
-    background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-    background-color: #72b352;
+    background: linear-gradient(to bottom, #e22d60 5%, #af0535 100%);
+    background-color: #e22d60;
 }
 .video{
     position: relative;
@@ -89,10 +90,11 @@ a:hover{cursor: pointer;}
     position: relative;
     top: 1px;
 }
+#searchbar{border-radius: 25px;}
 .searchbar{
     float: left;
    position: relative;
-left: 450px;
+left:50px ;
 }
 
 .categories{
@@ -105,7 +107,7 @@ left: 450px;
 }
 
 .categories li{
-    color: #04AA6D;
+    color: #e22d60;
     margin-top: 20px;
 }
 .categories ul:first-child {
@@ -142,7 +144,7 @@ bottom: 1000px;
     height: 100px;
 }
 .gamephoto{
-    color: #04AA6D;
+    color: #e22d60;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
@@ -156,7 +158,7 @@ width: 400px;}
 .gamecat{position: relative;
 bottom: -25px;
 left: 10px;
-color: #04AA6D;
+color: #af0535;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
@@ -167,7 +169,7 @@ color: #04AA6D;
 #price{
     text-align: center;
     width: 75px;
-    background-color: #04AA6D;
+    background-color: #e22d60;
     position: relative;
         bottom: 120px;
         left:150px;
