@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign in/up</title>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<link rel="icon" type="image/x-icon" href="sign-in-up.ico">
+	<link rel="stylesheet" type="text/css" href="sign-in-up.css">
+</head>
+<body>
+	
+<div class='topbar'>
+	<center>
+		
+		<h1 class='title'>
+			Sign In/Up
+		</h1>
+
+		<div class='logBox'>
+			
+				
+			<h1 class='emoji'>👤</h1>
+			<label >username</label>
+			<input placeholder="Username" id='username' class='logInput'><br>
+			<label for="password">Password</label>
+			<input type="password" placeholder="Password" id='password' class='logInput' ><br>
+			
+			<button class='signIn'>Sign In</button> <button class="signUp">Sign Up</button>
+		</div>
+	</center>
+</div>
+	<script>
+		
+			
+			
+			let admins = [
+				{ username: 'amine', password: 'alnort11001084' },
+				{ username: 'abdennour', password: 'abdennourpassword' }
+			]
+
+
+			
+
+			var users = [{username:'',password:'', balence:0,log:false,}]
+			$('.signUp').click(
+				function () {
+					var test = false
+					for (const key in localStorage) {
+						if (key == $('#username').val()) {
+							test = true
+							break
+						}
+					}
+					if ($('#username').val().length < 6) { alert('user name too short') }
+					else if (test == true) { alert('username taken') }
+					else if ($('#password').val().length < 8) { alert('weak password') }
+					else {
+						localStorage.setItem($('#username').val(), JSON.stringify({ username: $('#username').val(), password: $('#password').val(), balence: 0, loglog:false ,cart:[] }));
+
+						alert('account addd')
+						
+					}
+				}
+
+			)
+
+
+			$('.signIn').click(
+
+				function () {
+
+					var test = false
+					for (const key in localStorage) {
+						if (key == $('#username').val()) {
+							test = true
+							var kei=key
+							break
+						}
+					}
+					JSON.parse(localStorage.getItem($('#username').val()))
+					if (test===true && JSON.parse(localStorage.getItem($('#username').val())).password== $('#password').val() ){
+						var newobj = JSON.parse(localStorage.getItem($('#username').val()))
+newobj.loglog=true
+						localStorage.setItem(kei, JSON.stringify(newobj))
+					
+						$('.logBox').empty()
+						$('.logBox').append('<a href="mainpage.html"><h1> welcome ' + kei + ' click me to access ur acount</h1></a>')
+					}
+					else if (kei == $('#username').val() && JSON.parse(localStorage.getItem($('#username').val())).password!= $('#password').val()) { alert('wrong password')
+											}
+					
+					else {
+						alert('acount doesen t exist')
+					}
+
+				}
+			)
+
+	</script>
+
+</body>
+</html>

@@ -1,34 +1,38 @@
-body{
+body {
 	background-color: #181818;
 }
 
-h1{
+h1 {
 	font-family: cursive;
 	font-size: 50px;
 	color: #04AA6D;
 }
 
-h2{color: #04AA6D;
+h2 {
+	color: #04AA6D;
 	margin-left: 20px;
 	margin-top: 25px;
 	font-family: cursive;
 	font-size: 30px;
 }
 
-.title{
-position: relative;
-bottom: 90px;
-right: 150px;
+.title {
+	position: relative;
+	bottom: 90px;
+	right: 150px;
 	margin-top: 115px;
 	margin-left: 250px;
 }
+video{position: relative;
+left: 100px;}
+.requirment {
+	display: flex;
+}
 
-.requirment{display: flex;}
-
-.gameimg{
+.gameimg {
 	position: relative;
-		
-		
+
+
 	margin-top: 20px;
 	width: 525px;
 	height: auto;
@@ -61,10 +65,10 @@ button:active {
 }
 
 
-.infos{
+.infos {
 	background-color: #333;
 	position: absolute;
-	width: 600px; 
+	width: 600px;
 	height: 90%;
 	right: 0px;
 	left: 850px;
@@ -74,15 +78,15 @@ button:active {
 	border-radius: 7%;
 }
 
-.buy{
+.buy {
 	margin-left: 950px;
 	margin-top: 20px;
 	width: 160px;
 	height: 80px;
 }
 
-.downbar{
-	
+.downbar {
+
 	background-color: grey;
 	position: absolute;
 	width: 80%;
@@ -92,11 +96,15 @@ button:active {
 	top: 845px;
 	bottom: 0px;
 	border: solid black 2px;
-	border-radius:10px;
+	border-radius: 10px;
 }
-p{margin-left: 20px;
-	font-size: medium;}
-h3{
+
+p {
+	margin-left: 20px;
+	font-size: medium;
+}
+
+h3 {
 	margin-left: 20px;
 	margin-top: 10px;
 	font-family: cursive;

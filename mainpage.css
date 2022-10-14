@@ -16,13 +16,42 @@ body{background-color: #181818;}
     font-size: 17px;
 }
 
-
+#logout {
+    background: rgb(51, 51, 51);
+    background: radial-gradient(circle, #77b55a 0%, #04AA6D 100%);
+    background-color: #333;
+    border-radius: 26px;
+    border: 1px solid #181818;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Georgia;
+    font-size: 16px;
+    padding: 15px 34px;
+    text-decoration: none;
+    position: relative;
+    left:30px;
+}
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
 
+.active {
+    background: rgb(51, 51, 51);
+    background: radial-gradient(circle, #77b55a 0%, #04AA6D 100%);
+    background-color: #333;
 
+    border: 1px solid #181818;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Georgia;
+    font-size: 16px;
+    padding: 15px 34px;
+    text-decoration: none;
+    position: relative;
+}
 .topnav a.active {
     background-color: #04AA6D;
     color: white;
@@ -46,20 +75,26 @@ bottom:70px;
     padding: 15px 34px;
     text-decoration: none;
 }
-
+a:hover{cursor: pointer;}
 .searchbtn:hover {
     background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
     background-color: #72b352;
 }
-
+.video{
+    position: relative;
+    top: 200px;
+    
+}
 .searchbtn:active {
     position: relative;
     top: 1px;
 }
 .searchbar{
+    float: left;
    position: relative;
-left: 500px;
+left: 450px;
 }
+
 .categories{
     border-radius: 25px;
     margin-top: 25px;
@@ -101,6 +136,10 @@ bottom: 1000px;
    
     height: 400px;
     width: 425px;
+}
+#foot{
+    width: 1200px;
+    height: 100px;
 }
 .gamephoto{
     color: #04AA6D;
