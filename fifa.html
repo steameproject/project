@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GOD OF WAR</title>
+    <link rel="stylesheet" type="text/css" href="game-display.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <a href="mainpage.html"><button class='back'>Go Back</button></a>
+
+    <div class='infos'>
+        <h2>
+            Release Date :30th September 2022
+        </h2>
+        <h2>
+            Rating : 4.7/5
+        </h2>
+
+        <h2>
+            Editor : Sony Interactive Entertainment, Capcom, PLUS
+        </h2>
+        <h2>
+            categories :PC sport platforming
+        </h2>
+        <h2>
+            Price : $59.99 USD
+        </h2>
+
+    </div>
+    <h1 class='title'>FIFA 2023
+        <br>
+        <video width="700px" controls style="position:relative ; right:50px;">
+            <source src="images/God of War – Announce Trailer _ PC.mp4" type="video/mp4">
+        </video>
+    </h1>
+    <div class='downbar'>
+        <h3>story</h3>
+        <p>FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology that delivers even more gameplay realism, men’s and women’s FIFA World Cup™ coming during the season, women’s club teams, cross-play features*, and more.</p>
+        <div class="requirment">
+            <p>
+            <h3>Minimum Requirements :</h3>
+            <p>
+                Requires a 64-bit processor and operating system <br>
+                OS: Windows 10 64-bit <br>
+                Processor: Intel Core i5 6600k or AMD Ryzen 5 1600<br>
+                Memory: 8 GB RAM<br>
+                Graphics: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570<br>
+                DirectX: Version 12<br>
+                Network: Broadband Internet connection<br>
+                Storage: 100 GB available space<br> 
+            </p>
+        </div>
+        <div class="requirment">
+            <p>
+            <h3>recomnded Requirements :</h3>
+            <p>
+                Requires a 64-bit processor and operating system <br>
+                OS: Windows 10 64-bit<br>
+                Processor: Intel Core i7 6700 or AMD Ryzen 7 2700X<br>
+                Memory: 12 GB RAM<br>
+                Graphics: NVIDIA GeForce GTX 1660 or AMD Radeon RX 5600 XT<br>
+                DirectX: Version 12<br>
+                Network: Broadband Internet connection<br>
+                Storage: 100 GB available space<br>
+            </p>
+        </div>
+
+        <button class='buy'>Add to cart</button>
+    </div>
+
+    <script>
+	$('.buy').click(
+		function () {
+
+			for (var key in localStorage) {
+
+				var kei = key
+				var newobj = JSON.parse(localStorage.getItem(kei))
+				if (newobj.loglog === true) {
+
+
+					break
+				}
+			}
+
+			newobj.cart.push('fifa 2023')
+
+			localStorage.setItem(kei, JSON.stringify(newobj))
+		}
+	)
+    </script>
+
+</body>
+
+</html>
