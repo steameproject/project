@@ -4,15 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Game</title>
+	<title>RETURN </title>
 	<link rel="stylesheet" type="text/css" href="game-display.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-	<button class='back'>Go Back</button>
-
+	<a href="mainpage.html"><button class='back'>Go Back</button></a>
 	<div class='infos'>
 		<h2>
 			Release Date :20 april 2018
@@ -81,7 +81,27 @@
 	</div>
 
 
+<script>
+	$('.buy').click(
+		function () {
 
+			for (var key in localStorage) {
+
+				var kei = key
+				var newobj = JSON.parse(localStorage.getItem(kei))
+				if (newobj.loglog === true) {
+
+
+					break
+				}
+			}
+
+			newobj.cart.push('Return to Monkey Island')
+
+			localStorage.setItem(kei, JSON.stringify(newobj))
+		}
+	)
+</script>
 </body>
 
 </html>
