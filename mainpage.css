@@ -1,8 +1,10 @@
-body{background-color: #181818;}
+body{background-image:url('images/black and.jpg') ;
+background-size: 1550px;}
 .topnav {
+
     border-radius: 25px;
     height:100px;
-    background-color: #333;
+   
     overflow: hidden;
 }
 
@@ -18,19 +20,20 @@ body{background-color: #181818;}
 
 #logout {
     background: rgb(51, 51, 51);
-    background: radial-gradient(circle, #e22d60 0%, #af0535 100%);
+    
     background-color: #333;
     border-radius: 26px;
     border: 1px solid #181818;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: rgb(236, 100, 3);
     font-family: Georgia;
     font-size: 16px;
     padding: 15px 34px;
     text-decoration: none;
     position: relative;
-    left:300px;
+    left:390px;
+    
 }
 .topnav a:hover {
     background-color: #ddd;
@@ -40,8 +43,8 @@ body{background-color: #181818;}
 .active {
     margin: 10px;
     background: rgb(51, 51, 51);
-    background: radial-gradient(circle, #e22d60 0%, #af0535 100%);
-    background-color: #333;
+   
+    background-color: #F4BE02;
 border-radius: 26px;
     border: 1px solid #181818;
     display: inline-block;
@@ -52,34 +55,42 @@ border-radius: 26px;
     padding: 15px 34px;
     text-decoration: none;
     position: relative;
+    right: 250px;
 }
 .topnav a.active {
-    background-color: #e22d60;
-    color: white;
+    font-weight: bold;
+    background-color: rgb(236, 100, 3);
+    color: #333;
+    
 }
 #logo{width: 200px;
-height: 90px;}
+height: 90px;
+
+}
 #navbar{position: relative;
 left: 500px;
 bottom:70px;
 }
 .searchbtn {
-    background: linear-gradient(to bottom, #e22d60 5%, #af0535 100%);
-    background-color: #af0535;
+   
+    position: relative;
+    top: 4px;
+width: 75px;
+    background-color: rgb(236, 100, 3);
     border-radius: 26px;
-    border: 1px solid #e22d60;
+    border: 1px solid black;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: black;
     font-family: Georgia;
     font-size: 16px;
-    padding: 15px 34px;
+    
     text-decoration: none;
 }
 a:hover{cursor: pointer;}
 .searchbtn:hover {
-    background: linear-gradient(to bottom, #e22d60 5%, #af0535 100%);
-    background-color: #e22d60;
+    
+    background-color: white;
 }
 .video{
     position: relative;
@@ -100,14 +111,16 @@ left:50px ;
 .categories{
     border-radius: 25px;
     margin-top: 25px;
-    background-color: #333;
+    background-color: #F4BE02;
     height:1000px;
     width: 200px;
 
 }
 
 .categories li{
-    color: #e22d60;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(236, 100, 3);
     margin-top: 20px;
 }
 .categories ul:first-child {
@@ -158,7 +171,7 @@ width: 400px;}
 .gamecat{position: relative;
 bottom: -25px;
 left: 10px;
-color: #af0535;
+color: rgb(244, 148, 80);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
@@ -169,9 +182,9 @@ color: #af0535;
 #price{
     text-align: center;
     width: 75px;
-    background-color: #e22d60;
+    background-color: rgb(236, 100, 3);
     position: relative;
-        bottom: 120px;
+        
         left:150px;
        color: #333;
         font-size: 20px;

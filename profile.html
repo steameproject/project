@@ -17,9 +17,9 @@
     <div class="topnav">
         <img id="logo" src="images/logo/logowhite.png" alt="">
         <div id="navbar">
-            <a class="active" onclick="refreshPage()">Home</a>
+            <a class="active" href="mainpage.html">Home</a>
 
-            <a href="#contact">Contact</a>
+            <button class="button" id="logout">logout</button>
             
         </div>
     </div>
@@ -48,10 +48,42 @@
 
 </div>
 
- 
+  <button id="delete">emmpty cart</button>
     </div>
+   
     </center>
     <script>
+        $('#logout').click(function () {
+
+                for (var key in localStorage) {
+                    var test = false
+                    var kei = key
+                    var newobj = JSON.parse(localStorage.getItem(kei))
+                    if (newobj.loglog === true) {
+                        var test = true
+
+
+                        break
+                    }
+                }
+                if (test === true) {
+                    newobj.loglog = false
+
+                    localStorage.setItem(kei, JSON.stringify(newobj))
+
+
+                    $('#games').empty()
+                    $('#games').append('<a href="sign-in-up.html" ><h1> ' + kei + ' click me to log out</h1></a>')
+                }
+                else if (test === false) {
+                    alert('no account open currently')
+                }
+            })
+        $('#delete').click(
+            function (){
+                $('#cart').empty()
+            }
+        )
         let games = [
                 { name: 'elden ring', price: 59.99, story: 'teststory', category: ['pc', 'adventure', 'action', 'RPG'], img: 'htmlcss/games/eldenring.jfif', page: 'elden.html' },
                 { name: 'Return to Monkey Island', price: 29.99, story: 'teststory', category: ['pc', 'adventure'], img: 'htmlcss/games/rtmi.jfif', page: 'returntomonkey.html' },
@@ -96,11 +128,14 @@
                 }
             var carty=loging()
             var crat=carty.cart
-       
+         var topay=0
                 $('#cart').empty()
                 for (let i = 0; i < crat.length; i++) {
                     if (gamenames.includes(crat[i])) {
+                        
+                       
                         for (let j = 0; j < games.length; j++) {
+                          
                             if(games[j].name===crat[i]){
                                 var stri = arraytostr(games[i].category)
 
@@ -111,7 +146,7 @@
                     }
 
                 }
-
+    $('#cart').append('<h2>'+ topay +'</h2>')
             
     $('#username').click( function () {
 
