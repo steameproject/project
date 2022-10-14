@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>steame</title>
     <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+   
 <div class="topnav">
     <img id="logo" src="images/logo/logowhite.png" alt="">
     <div id="navbar">
-        <a class="active" href="#home">Home</a>
+        <a class="active" onclick="refreshPage()">Home</a>
     
     <a href="#contact">Contact</a>
     <div class="searchbar">
-    <input type="text" name="" id="">
+    <input type="text" name="" id="searchbar">
     <button class="searchbtn">Search</button>
     </div>
 </div>
@@ -23,58 +27,205 @@
 
 <div class="categories">
     <ul>  
-    <a class="category"><li>Console</li></a>
-    <a class="category"><li> Mobile</li></a>
-    <a class="category"><li> PC</li></a>
-    <a class="category"><li>Action</li></a>
-    <a class="category"><li>Adventure</li></a>
-    <a class="category"><li>Fighting</li></a>
-    <a class="category"><li>First person shooter</li></a>
-    <a class="category"><li>Third person shooter</li></a>
-    <a class="category"><li>Platforming</li></a>
-    <a class="category"><li>Real-time strategy</li></a>
-    <a class="category"><li>Role-playing</li></a>
-    <a class="category"><li>Simulation</li></a>
-    <a class="category"><li>Sports</li></a>
+    <a class="category" id="console"><li>Console</li></a>
+    <a class="category" id="mobile"><li> Mobile</li></a>
+    <a class="category" id="pc"><li> PC</li></a>
+    <a class="category" id="action"><li>Action</li></a>
+    <a class="category" id="adventure"><li>Adventure</li></a>
+    <a class="category" id="fighting"><li>Fighting</li></a>
+    
+    <a class="category" id="platforming"><li>Platforming</li></a>
+    <a class="category" id="RPG"><li>RPG</li></a>
+    <a class="category" id="role-playing"><li>Role-playing</li></a>
+    <a class="category" id="simulation"><li>Simulation</li></a>
+    <a class="category" id="sports"><li>Sports</li></a>
     </ul>
 </div>
 <div id="games">
-    <div class="game" >
-        <img class='gamephoto' src="images/god-of-war-2018-essential-tips-and-tricks.jpg" alt="">
-        <p class="gamecat"> god of war</p>
-        <p class="gamecat">console, Role-playing , action ,adventure </p>
-        <p id="price">49.99$</p>
-
-    </div>
-    <div class='game' id='EldenRing'>
-        <img class='gamephoto' src='eldenring.jfif'>
-        <p class='gamecat'>Elden Ring</p>
-        <p class='gamecat'>PC, Action, RPG</p>
-        <p id='price'>59.99$</p>
-    </div>
-    
-    <div class='game' id='ACValhalla'>
-        <img class='gamephoto' src='acval.jfif'>
-        <p class='gamecat'>Assassin's Creed Valhalla</p>
-        <p class='gamecat'>PC, Action, Adventure</p>
-        <p id='price'>59.99$</p>
-    </div>
-    
-    <div class='game' id='RTMonkeyIsland'>
-        <img class='gamephoto' src='rtmi.jfif'>
-        <p class='gamecat'>Return to Monkey Island</p>
-        <p class='gamecat'>PC, Adventure</p>
-        <p id='price'>24.99$</p>
-    </div>
-    
-    <div class='game' id='cyberpunk2077'>
-        <img class='gamephoto' src='cyberpunk.jfif'>
-        <p class='gamecat'>Cyberpunk 2077</p>
-        <p class='gamecat'>PC, Action, Adventure, RPG</p>
-        <p id='price'>59.99$</p>
-    </div>
+ 
     
 </div>
+<script>
+    function refreshPage() {
+        window.location.reload();
+    } 
+    let games = [
+        { name: 'elden ring', price: 59.99, story: 'teststory', category: ['pc', 'adventure','action','RPG'] ,img:'htmlcss/games/eldenring.jfif' ,page:'elden.html'},
+        { name: 'Return to Monkey Island', price: 29.99, story: 'teststory', category: ['pc','adventure'] ,img:'htmlcss/games/rtmi.jfif', page:'returntomonkey.html' },
+            { name: 'god of war', price: 49.99, story: 'teststory', category: ['console', 'Role-playing', 'action', 'adventure' ],img:'images/god-of-war-2018-essential-tips-and-tricks.jpg', page:'god.html' },
+         {
+            name: 'assassin creed valhalla', price: 59.99, story: 'teststory', category: ['PC', 'Action', 'Adventure'], img:'htmlcss/games/acval.jfif', page:'assassincreed.html'
+        },
+        {
+            name: 'cyber punk 2077', price: 59.99, story: 'teststory', category: ['PC', 'Action', 'Adventure'],img:'htmlcss/games/cyberpunk.jfif' , page:'cyberpunk.html'
+        },
+        
+       
 
+        ]
+  $('#console').click(function () {
+        $('#games').empty()
+        for (let i = 0; i < games.length; i++) {
+            if (games[i].category.includes('console')) {
+                var stri = arraytostr(games[i].category)
+
+                $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+            }
+
+        }
+
+    })
+     $('#mobile').click(function () {
+            $('#games').empty()
+            for (let i = 0; i < games.length; i++) {
+                if (games[i].category.includes('mobile')) {
+                    var stri = arraytostr(games[i].category)
+
+                    $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                }
+
+            }
+
+        })
+         $('#pc').click(function () {
+                $('#games').empty()
+                for (let i = 0; i < games.length; i++) {
+                    if (games[i].category.includes('pc')) {
+                        var stri = arraytostr(games[i].category)
+
+                        $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                    }
+
+                }
+
+            })
+             $('#adventure').click(function () {
+                    $('#games').empty()
+                    for (let i = 0; i < games.length; i++) {
+                        if (games[i].category.includes('adventure')) {
+                            var stri = arraytostr(games[i].category)
+
+                            $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                        }
+
+                    }
+
+                })
+                 $('#fighting').click(function () {
+                        $('#games').empty()
+                        for (let i = 0; i < games.length; i++) {
+                            if (games[i].category.includes('fighting')) {
+                                var stri = arraytostr(games[i].category)
+
+                                $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                            }
+
+                        }
+
+                    })
+                     $('#platforming').click(function () {
+                            $('#games').empty()
+                            for (let i = 0; i < games.length; i++) {
+                                if (games[i].category.includes('platforming')) {
+                                    var stri = arraytostr(games[i].category)
+
+                                    $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                                }
+
+                            }
+
+                        })
+                         $('#RPG').click(function () {
+                                $('#games').empty()
+                                for (let i = 0; i < games.length; i++) {
+                                    if (games[i].category.includes('RPG')) {
+                                        var stri = arraytostr(games[i].category)
+
+                                        $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                                    }
+
+                                }
+
+                            })
+                             $('#role-playing').click(function () {
+                                    $('#games').empty()
+                                    for (let i = 0; i < games.length; i++) {
+                                        if (games[i].category.includes('Role-playing')) {
+                                            var stri = arraytostr(games[i].category)
+
+                                            $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                                        }
+
+                                    }
+
+                                })
+                                $('#simulation').click(function () {
+                                        $('#games').empty()
+                                        for (let i = 0; i < games.length; i++) {
+                                            if (games[i].category.includes('simulation')) {
+                                                var stri = arraytostr(games[i].category)
+
+                                                $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                                            }
+
+                                        }
+
+                                    })
+                                    $('#sports').click(function () {
+                                            $('#games').empty()
+                                            for (let i = 0; i < games.length; i++) {
+                                                if (games[i].category.includes('sports')) {
+                                                    var stri = arraytostr(games[i].category)
+
+                                                    $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                                                }
+
+                                            }
+
+                                        })
+         $('#action').click(function () {
+                $('#games').empty()
+                for (let i = 0; i < games.length; i++) {
+                    if (games[i].category.includes('action')) {
+                        var stri = arraytostr(games[i].category)
+
+                        $('#games').append('<a href=' + games[i].page + '><div class="game" ><img class="gamephoto" src=' + games[i].img + '><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>')
+                    }
+
+                }
+
+            })
+
+        function arraytostr(arr) {
+            var str=''
+            for (let i = 0; i < arr.length; i++) {
+                str+= arr[i]+','
+                
+            }
+            return str
+        }
+        for (let i = 0; i < games.length; i++) {
+var stri=arraytostr(games[i].category)
+           
+         $('#games').append('<a href=' + games[i].page +'><div class="game" ><img class="gamephoto" src='+ games[i].img+'><p class="gamecat">'+ games[i].name+'</p><p class="gamecat">'+stri +'</p><p id="price">'+ games[i].price+'$</p></div></a>')   }
+        let admins = [
+            { username: 'amine', password: 'alnort11001084' },
+            { username: 'abdennour', password: 'abdennourpassword' }
+        ]
+
+        $('.searchbtn').click(function () {
+            $('#games').empty()
+            for (let i = 0; i < games.length; i++) {
+                if(games[i].name==$('#searchbar').val()){
+                    var stri = arraytostr(games[i].category)
+
+                    $('#games').append('<a href='+ games[i].page +'><div class="game" ><img class="gamephoto" src='+ games[i].img+'><p class="gamecat">' + games[i].name + '</p><p class="gamecat">' + stri + '</p><p id="price">' + games[i].price + '$</p></div></a>') 
+                }
+                
+            }
+
+        })
+        var users = []
+</script>
 </body>
 </html>
