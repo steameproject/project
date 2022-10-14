@@ -344,14 +344,13 @@ a:hover {
             margin-right: auto;
         }
         
-    #h2{width: fit-content;
-        height: 50px;
-        
-        background-color: #af0535;
-        top: 0px;
-        right: 500px;
-        position: relative;
-    }
+  h2{position: relative;
+right: 1100px;
+top:300px;
+font-size: 50px;
+font-family: 'Times New Roman', Times, serif;
+
+}
         #price {
             text-align: center;
             width: 75px;
